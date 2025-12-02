@@ -2,6 +2,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
+export const runtime = 'edge';
+
 // 請確保在 .env.local 檔案中設定了 GOOGLE_API_KEY
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
 
