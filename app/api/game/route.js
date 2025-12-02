@@ -44,7 +44,7 @@ export async function POST(req) {
         請用繁體中文，以「對話框」的口吻，簡短解釋「${userGuess}」和「${targetWord}」之間的關聯性或區別，引導使用者猜出正確答案。
         例如：如果謎底是蘋果，使用者猜香蕉，你可以說：「香蕉也是水果，但謎底是紅色的，而且長在樹上。」
         
-        請直接回覆提示內容，不要包含答案。
+        請直接回覆提示內容，不要包含「${targetWord}」。
       `;
 
       const result = await model.generateContent(prompt);
